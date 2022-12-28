@@ -4,7 +4,7 @@ alert("BIENVENIDO AL CURSO, TIENE " + alumnos + " ALUMNOS PARA EVALUAR");
 
 for (let i = 0; i < alumnos; i++) {
     let nombreAlumno = prompt("INGRESE EL NOMBRE Y/Ó APELLIDO DEL ALUMNO:");
-    while (nombreAlumno === "") { //tambien devolver este mensaje si ingresa un numero, solo aceptar texto
+    while (nombreAlumno === "" || nombreAlumno == null) { //tambien devolver este mensaje si ingresa un numero, solo aceptar texto
         nombreAlumno = prompt("Ups! Debe ingresar algún dato. INGRESE EL NOMBRE Y/Ó APELLIDO DEL ALUMNO:");
     }
     let totalDeNotas = 0;
