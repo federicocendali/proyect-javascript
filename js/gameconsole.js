@@ -22,10 +22,10 @@ while (energiaGoku > 0 && energiaSuperman > 0) {
         energiaSuperman -= golpeGoku;
         energiaGoku -= golpeSuperman;
     } else if (golpeSuperman > golpeGoku) {
-        document.write('<div class="card"><img src="/assets/img/golpesuperman.jpeg"/></div>');
+        document.write('<div class="card"><img src="../assets/img/golpesuperman.jpeg"/></div>');
         energiaGoku -= golpeSuperman;
     } else {
-        document.write('<div class="card"><img src="/assets/img/golpegoku.jpeg"/></div>');
+        document.write('<div class="card"><img src="../assets/img/golpegoku.jpeg"/></div>');
         energiaSuperman -= golpeGoku;
     }
 
@@ -37,10 +37,10 @@ if (energiaGoku === energiaSuperman) {
     console.error("Perdieron los dos!!!");
 } else if (energiaGoku > 0) {
     console.error("Gano Goku!!!");
-    document.write('<div class="ganador"><img src="/assets/img/wingoku.jpeg"/></div>');
+    document.write('<div class="ganador"><img src="../assets/img/wingoku.jpeg"/></div>');
 } else {
     console.error("Gano Superman!!!");
-    document.write('<div class="ganador"><img src="/assets/img/winsuperman.jpeg"/></div>');
+    document.write('<div class="ganador"><img src="../assets/img/winsuperman.jpeg"/></div>');
 }
 
 setInterval(()=> window.location.reload(), 10000);
