@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Tercer entrega</title>
+</head>
+<body>
+    <h1>Tercer pre entrega!<br>JavaScript</h1>
+    <p>by Federico Cendali<br><i>Developer</i></p>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Volver al main</a></li>
+            <li><a href="./primerentrega.html">Primer pre entrega!</a></li>
+            <li><a href="./segundaentrega.html">Segunda pre entrega!</a></li>
+            <li><a href="./consolegame.html">Simple Console Game!</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        <section>
+            <h2>Reproductor de Música</h2>
+            <h5>Simplemente hace click sobre la canción que queres escuchar...</h5>
+            <div id="song"></div>
+            <div id="btn"></div>
+            <audio id="player" src="../assets/audio/Linkin Park - A Place For My Head.mp3"></audio>
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+            <input type="range" id="volume" min="0" max="1" value="1" step=".01">
+            <ul>
+                <li>Linkin Park - A Place For My Head</li>
+                <li>Linkin Park - By Myself</li>
+                <li>Linkin Park - Crawling</li>
+                <li>Linkin Park - Cure For The Itch</li>
+                <li>Linkin Park - Forgotten</li>
+                <li>Linkin Park - In The End</li>
+                <li>Linkin Park - One Step Closer</li>
+                <li>Linkin Park - Papercut</li>
+                <li>Linkin Park - Points Of Authority</li>
+                <li>Linkin Park - Pushing Me Away</li>
+                <li>Linkin Park - Runaway</li>
+                <li>Linkin Park - With You</li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h2>Cronómetro (uso de Storage)</h2>
+            <h3>
+                <span id="crono"> 0.0 </span> segundos
+            </h3>
+            <button type="button" id="cambiar"> arrancar/parar </button>
+            <button type="button" id="inicializar"> inicializar </button>
+        </section>
+    </main>
+    <script src="../js/entrega03.js"></script>
+</body>
+</html>
