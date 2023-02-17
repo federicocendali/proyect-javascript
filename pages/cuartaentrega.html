@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Tercer entrega</title>
+    <title>Cuarta entrega</title>
 </head>
 <body>
-    <h1>Tercer pre entrega!<br>JavaScript</h1>
+    <h1>Cuarta entrega!<br>JavaScript</h1>
     <p>by Federico Cendali<br><i>Developer</i></p>
     <nav>
         <ul>
             <li><a href="../index.html">Volver al main</a></li>
             <li><a href="./primerentrega.html">Primer pre entrega!</a></li>
             <li><a href="./segundaentrega.html">Segunda pre entrega!</a></li>
-            <li><a href="./cuartaentrega.html">Cuarta entrega!</a></li>
+            <li><a href="./terceraentrega.html">Tercer pre entrega!</a></li>
             <li><a href="./consolegame.html">Simple Console Game!</a></li>
             <li><a href="./3dgame.html">3D Pokemon Game!</a></li>
         </ul>
@@ -23,8 +23,17 @@
     <hr>
     <main>
         <section>
-            <h2>Reproductor de Música</h2>
-            <h5>Simplemente hace click sobre la canción que queres escuchar...</h5>
+            <h2>¿Querés saber cuanto tiempo pasas esuchando música?<br>Haz click y averígualo</h2>
+            <h3>
+                <span id="crono"> 0.0 </span> segundos
+            </h3>
+            <button type="button" id="cambiar">Comenzar / Pausar</button>
+            <button type="button" id="inicializar">Volver a iniciar</button>
+        </section>
+        <hr>
+        <section>
+            <h2>>> Reproductor de Música <<</h2>
+            <h5>Simplemente haz click sobre la canción que quieras escuchar...</h5>
             <div id="song"></div>
             <div id="btn"></div>
             <audio id="player" src="../assets/audio/Linkin Park - A Place For My Head.mp3"></audio>
@@ -47,16 +56,7 @@
                 <li>Linkin Park - With You</li>
             </ul>
         </section>
-        <hr>
-        <section>
-            <h2>Cronómetro (uso de Storage)</h2>
-            <h3>
-                <span id="crono"> 0.0 </span> segundos
-            </h3>
-            <button type="button" id="cambiar">arrancar/parar</button>
-            <button type="button" id="inicializar">inicializar</button>
-        </section>
     </main>
-    <script src="../js/entrega03.js"></script>
+    <script src="../js/entrega04.js"></script>
 </body>
 </html>
