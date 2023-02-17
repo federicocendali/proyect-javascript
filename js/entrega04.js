@@ -38,6 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
     mostrar();
 });
 
+// Toastify
+
+let btnToast = document.getElementById('inicializar');
+btnToast.addEventListener("click", () => {
+    Toastify({
+        text: "Mira como dejar de escuchar música...",
+        duration: 4000,
+        destination: "https://www.youtube.com/watch?v=im3vc2NzCVc",
+        newWindow: true,
+        close: true,
+        style: {background: "linear-gradient(to right, #ffe4c4, #95c43d)"}
+    }).showToast();
+});
+
 // Reproductor de Música
 
 const player = document.querySelector("#player");
@@ -100,4 +114,17 @@ document.addEventListener('DOMContentLoaded', () => {
     for(let song of songs) {
         song.addEventListener('click', changeSong);
     };
+});
+
+// Sweat alert
+
+document.querySelector("#stop").addEventListener("click", () => {
+    Swal.fire({
+        position: 'center',
+        icon: 'info',
+        iconColor: '#95c43d',
+        title: 'La canción ha vuelto al principio',
+        showConfirmButton: false,
+        timer: 1200
+    });
 });
