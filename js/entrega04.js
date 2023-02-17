@@ -128,3 +128,29 @@ document.querySelector("#stop").addEventListener("click", () => {
         timer: 1200
     });
 });
+
+// Poke API
+
+async function getPokemon(id) {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const data = await res.json();
+    return data;
+};
+
+function renderPokemon(criatura) {
+    pokemon.textContent = criatura.name;
+    imagen.setAttribute("src", criatura.sprites.front_default);
+};
+
+async function init() {
+    const initialPokemon = await getPokemon(25);
+    console.log(initialPokemon);
+    renderPokemon(initialPokemon);
+};
+
+search.addEventListener("change", async () => {
+    const pokemon = await getPokemon(search.value.toLowerCase());
+    renderPokemon(pokemon);
+});
+
+init();
