@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,20 @@
     <title>3D Pokemon Game!</title>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.rawgit.com/ngokevin/kframe/d7bd9968/components/sun-sky/dist/aframe-sun-sky.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/ngokevin/kframe/d7bd9968/components/sun-sky/dist/aframe-sun-sky.min.js"></script>
 </head>
+
 <body>
     <a-scene>
         <a-assets>
-            <img src="../assets/img/game/piso.jpg" alt="" id="piso"/>
-            <img src="../assets/img/game/pared.jpeg" alt="" id="pared"/>
+            <img src="../assets/img/game/piso.jpg" alt="" id="piso" />
+            <img src="../assets/img/game/pared.jpeg" alt="" id="pared" />
         </a-assets>
         <a-sun-sky material="sunPosition: 0 1 0"></a-sun-sky>
         <a-entity id="jugador" camera kinematic-body universal-controls position="0 1.6 0">
-            <a-text value="" width="4" id="score" color="black" position="0 -.5 -1" anchor="center" align="center"></a-text>
+            <a-text value="" width="4" id="score" color="black" position="0 -.5 -1" anchor="center"
+                align="center"></a-text>
             <a-cursor fuse="true" fuse-timeout="800"></a-cursor>
         </a-entity>
         <a-grid static-body src="#piso"></a-grid>
@@ -26,4 +30,5 @@
     </a-scene>
     <script src="../js/game3d.js"></script>
 </body>
+
 </html>

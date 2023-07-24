@@ -11,36 +11,36 @@ console.log("Energia inicial de Goku " + energiaGoku);
 let round = 0;
 
 while (energiaGoku > 0 && energiaSuperman > 0) {
-    round+=1;
-    console.log("Round N°: " + round);
-    let golpeGoku = Math.ceil(Math.random() * (MAX_POWER - MIN_POWER) + MIN_POWER);
-    console.warn("Golpe Goku " + golpeGoku);
-    let golpeSuperman = Math.ceil(Math.random() * (MAX_POWER - MIN_POWER) + MIN_POWER);
-    console.warn("Golpe Superman " + golpeSuperman);
+  round += 1;
+  console.log("Round N°: " + round);
+  let golpeGoku = Math.ceil(Math.random() * (MAX_POWER - MIN_POWER) + MIN_POWER);
+  console.warn("Golpe Goku " + golpeGoku);
+  let golpeSuperman = Math.ceil(Math.random() * (MAX_POWER - MIN_POWER) + MIN_POWER);
+  console.warn("Golpe Superman " + golpeSuperman);
 
-    if (golpeGoku === golpeSuperman) {
-        energiaSuperman -= golpeGoku;
-        energiaGoku -= golpeSuperman;
-    } else if (golpeSuperman > golpeGoku) {
-        document.write('<div class="card"><img src="../assets/img/game/golpesuperman.jpeg"/></div>');
-        energiaGoku -= golpeSuperman;
-    } else {
-        document.write('<div class="card"><img src="../assets/img/game/golpegoku.jpeg"/></div>');
-        energiaSuperman -= golpeGoku;
-    }
+  if (golpeGoku === golpeSuperman) {
+    energiaSuperman -= golpeGoku;
+    energiaGoku -= golpeSuperman;
+  } else if (golpeSuperman > golpeGoku) {
+    document.write('<div class="card"><img src="../assets/img/game/golpesuperman.jpeg"/></div>');
+    energiaGoku -= golpeSuperman;
+  } else {
+    document.write('<div class="card"><img src="../assets/img/game/golpegoku.jpeg"/></div>');
+    energiaSuperman -= golpeGoku;
+  }
 
-    console.log("Energia de Superman " + energiaSuperman);
-    console.log("Energia de Goku " + energiaGoku);
+  console.log("Energia de Superman " + energiaSuperman);
+  console.log("Energia de Goku " + energiaGoku);
 }
 
 if (energiaGoku === energiaSuperman) {
-    console.error("Perdieron los dos!!!");
+  console.error("Perdieron los dos!!!");
 } else if (energiaGoku > 0) {
-    console.error("Gano Goku!!!");
-    document.write('<div class="ganador"><img src="../assets/img/game/wingoku.jpeg"/></div>');
+  console.error("Gano Goku!!!");
+  document.write('<div class="ganador"><img src="../assets/img/game/wingoku.jpeg"/></div>');
 } else {
-    console.error("Gano Superman!!!");
-    document.write('<div class="ganador"><img src="../assets/img/game/winsuperman.jpeg"/></div>');
+  console.error("Gano Superman!!!");
+  document.write('<div class="ganador"><img src="../assets/img/game/winsuperman.jpeg"/></div>');
 }
 
-setInterval(()=> window.location.reload(), 10000);
+setInterval(() => window.location.reload(), 10000);
